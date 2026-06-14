@@ -1,0 +1,18 @@
+# Build artifacts
+dist/
+web/public/parser.wasm
+web/public/wasm_exec.js
+
+# Dependencies
+web/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

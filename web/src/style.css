@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 48px;
+  background: #252526;
+  border-bottom: 1px solid #3c3c3c;
+  gap: 24px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  color: #4ec9b0;
+}
+
+.header-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-link:hover {
+  color: #d4d4d4;
+  background: #2a2d2e;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background: #37373d;
+}
+
+#status {
+  font-size: 12px;
+  color: #888;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+#status.ready {
+  color: #4ec9b0;
+}
+
+#status.error {
+  color: #f44747;
+}
+
+.page {
+  height: calc(100vh - 48px);
+  overflow: hidden;
+}
+
+#page-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+#editor {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.cm-editor {
+  height: 100%;
+}
+
+.cm-editor .cm-scroller {
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.docs-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.docs-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.docs-content h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #cccccc;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.docs-content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin-bottom: 12px;
+}
+
+.docs-content ul {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.docs-content li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin-bottom: 4px;
+}
+
+.docs-content code {
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 13px;
+  background: #2d2d2d;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #4ec9b0;
+}
+
+.docs-content strong {
+  color: #d4d4d4;
+}

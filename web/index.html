@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logstash Playground</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      <span class="header-title">logstash-sandbox</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#editor" class="nav-link active" data-page="editor">Editor</a>
+      <a href="#docs" class="nav-link" data-page="docs">Documentation</a>
+    </nav>
+    <span id="status">Loading WASM parser...</span>
+  </header>
+
+  <div id="page-editor" class="page">
+    <div id="editor"></div>
+  </div>
+
+  <div id="page-docs" class="page" style="display:none">
+    <div class="docs-content">
+      <h2>Documentation</h2>
+      <p>Welcome to Logstash Playground — a browser-based Logstash configuration editor with live error highlighting.</p>
+
+      <h3>Getting Started</h3>
+      <p>Use the <strong>Editor</strong> tab to write your Logstash configuration. Syntax errors are highlighted in real-time using a Go-based parser compiled to WebAssembly.</p>
+
+      <h3>Configuration Structure</h3>
+      <p>A Logstash configuration file has three sections:</p>
+      <ul>
+        <li><code>input { }</code> — defines data sources (e.g., beats, file, stdin)</li>
+        <li><code>filter { }</code> — transforms and enriches events (e.g., mutate, grok, date)</li>
+        <li><code>output { }</code> — sends events to destinations (e.g., elasticsearch, stdout)</li>
+      </ul>
+
+      <h3>Features</h3>
+      <ul>
+        <li>Live syntax error detection with inline highlighting</li>
+        <li>Semantic validation for unknown plugins, options, and codecs</li>
+        <li>No server required — parsing and validation run entirely in the browser</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/wasm_exec.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
